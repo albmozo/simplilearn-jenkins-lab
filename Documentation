@@ -25,6 +25,7 @@ http://localhost:8082/manager/html
 	Install withour restasrt
 	
 5) Create pipeline jobs (freestyle jobs)
+Please, check git folder "Jenkins"
 
 	5.1) Compilation job
 	
