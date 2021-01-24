@@ -1,0 +1,39 @@
+1) Install Jenkins, Git, Maven and Java
+
+2) Configure and Start Tomcat
+<role rolename="tomcat"/>
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<user username="tomcat" password="password" roles="tomcat"/>
+<user username="manager" password="password" roles="tomcat,manager-gui"/>
+<user username="jenkins" password="jenkins" roles="tomcat,manager-gui,manager-script"/>
+
+into /opt/tomcat/conf/tomcat-users.xml
+
+/opt/tomcat/bin/startup.sh
+
+
+3) Check access to Tomcat Manager App
+http://localhost:8082/manager/html
+(manager/ password)
+
+4) Configure Jenkins
+	4.1) Access to Jenkins dashboard
+	localhost:8081
+	
+	4.2) Manage Jenkins > Manage Plugins > Deploy to Container
+	Install withour restasrt
+	
+5) Create pipeline jobs (freestyle jobs)
+
+	5.1) Compilation job
+	
+	5.2) Test job
+	
+	5.3) Deployment job
+	
+6) Create Pipeline View
+
+7) Check WebApp is up and running
+http://localhost:8082/api/hello.html
+
